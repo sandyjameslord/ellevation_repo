@@ -6,7 +6,9 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "install-server": "npm i --prefix ./server",
+    "heroku-postbuild": "npm run install-server && npm run build"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",

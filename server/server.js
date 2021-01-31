@@ -27,13 +27,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 const productRoutes = require('./routes/product');
-app.use('/api', productRoutes);
+app.use(productRoutes);
 
-app.listen(3000, (err) => {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log('listening on PORT', 3000);
-    }
+module.exports = {
+    path: "/api",
+    handler: app
+}
 
-});
+// app.listen(3000, (err) => {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log('listening on PORT', 3000);
+//     }
+
+// });
