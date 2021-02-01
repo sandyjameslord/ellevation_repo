@@ -1,20 +1,5 @@
-# ellevation
+This is the repository for the MEVN stack webapp that I produced for the Ellevation Data Challenge. One aspect of the challenge
+asked to account for processing many files. One aspect of processing many files is sending and receiving them. To facilitate receiving and sending them
+I created webapp that uses a mongodb database connected to an AWS bucket. I use Vue with HTML and CSS for frontend and Node and Nuxt for backend work. I have incorporated Ellevation's color scheme and its logo in the app. A client can submit their MCAS data csv along with their district name. A user on Ellevation's end can then see every client's district name as well as download the associated csv. There is also an option to download all files simultaneously.
 
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+As this is a prototype, there are some minor issues. Currently, the submission button for a client does not work. I am working on it. I can upload using Postman but there is some difficulty with my POST api interacting with Multer to upload the csv to the bucket. 
